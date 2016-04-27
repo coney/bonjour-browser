@@ -27,7 +27,7 @@ namespace bonjour_broswer
             }
             else
             {
-                updateServiceTree(new TreeNodeMapper().map(results));
+                updateServiceTree(TreeNodeMapper.create(cbOrder.SelectedItem.ToString()).map(results));
                 btnRefresh.Enabled = true;
             }
         }
@@ -46,6 +46,13 @@ namespace bonjour_broswer
             btnRefresh.Enabled = false;
             var bonjourService = new BonjourService();
             bonjourService.ListAll(updateServiceList);
+        }
+
+        private void BrowserForm_Load(object sender, EventArgs e)
+        {
+            
+            cbOrder.Items.AddRange(TreeNodeMapper.getMapperNameList().ToArray());
+            cbOrder.SelectedItem = cbOrder.Items[0];
         }
     }
 }
