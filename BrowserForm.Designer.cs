@@ -30,7 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.serviceList = new System.Windows.Forms.TreeView();
+            this.listServices = new System.Windows.Forms.TreeView();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,7 +39,8 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.btnRefresh, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.serviceList, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.listServices, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -58,14 +59,15 @@
             this.btnRefresh.TabIndex = 0;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // serviceList
+            // listServices
             // 
-            this.serviceList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.serviceList.Location = new System.Drawing.Point(3, 3);
-            this.serviceList.Name = "serviceList";
-            this.serviceList.Size = new System.Drawing.Size(456, 511);
-            this.serviceList.TabIndex = 1;
+            this.listServices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listServices.Location = new System.Drawing.Point(3, 3);
+            this.listServices.Name = "listServices";
+            this.listServices.Size = new System.Drawing.Size(456, 511);
+            this.listServices.TabIndex = 1;
             // 
             // BrowserForm
             // 
@@ -84,7 +86,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.TreeView serviceList;
+        private System.Windows.Forms.TreeView listServices;
     }
 }
 
