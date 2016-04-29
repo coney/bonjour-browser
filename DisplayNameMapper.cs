@@ -6,6 +6,8 @@ namespace bonjour_broswer
 {
     internal class DisplayNameMapper : TreeNodeMapper
     {
+        public static string Name { get { return "Display Name"; } }
+
         public DisplayNameMapper()
         {
         }

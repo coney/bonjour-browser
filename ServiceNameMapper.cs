@@ -7,6 +7,8 @@ namespace bonjour_broswer
 {
     internal class ServiceNameMapper : TreeNodeMapper
     {
+        public static string Name { get { return "Service Name"; } }
+
         public ServiceNameMapper()
         {
         }

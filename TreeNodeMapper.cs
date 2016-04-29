@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 using Zeroconf;
 
@@ -8,12 +9,15 @@ namespace bonjour_broswer
 {
     internal abstract class TreeNodeMapper
     {
-        private const string ORDER_BY_NAME = "Display Name";
-        private const string ORDER_BY_SERVICE = "Services Name";
-        private static Dictionary<string, Type> nodeMapper = new Dictionary<string, Type>() {
-                { "Display Name", typeof(DisplayNameMapper)},
-                { "Service Name", typeof(ServiceNameMapper)}
-            };
+        private static IDictionary<string, Type> nodeMapper = getDerivedMappers();
+
+        public static IDictionary<string, Type> getDerivedMappers()
+        {
+            var baseType = typeof(TreeNodeMapper);
+            return Assembly.GetAssembly(baseType).GetTypes().Where(t =>
+                    t != baseType && baseType.IsAssignableFrom(t) && t.GetProperty("Name") != null
+                    ).ToDictionary(t => t.GetProperty("Name").GetValue(null).ToString());
+        }
 
         public static TreeNodeMapper create(string mapperName)
         {
