@@ -11,7 +11,8 @@ namespace bonjour_broswer
         private const string ORDER_BY_NAME = "Display Name";
         private const string ORDER_BY_SERVICE = "Services Name";
         private static Dictionary<string, Type> nodeMapper = new Dictionary<string, Type>() {
-                { "Display Name", typeof(DisplayNameMapper)}
+                { "Display Name", typeof(DisplayNameMapper)},
+                { "Service Name", typeof(ServiceNameMapper)}
             };
 
         public static TreeNodeMapper create(string mapperName)
