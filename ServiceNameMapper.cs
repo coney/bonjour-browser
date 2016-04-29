@@ -45,7 +45,6 @@ namespace bonjour_browser
                 }
                 foreach (var service in result.Services)
                 {
-                    Console.WriteLine("add " + service.Key + ":" + result.DisplayName);
                     if (!newResults.ContainsKey(service.Key))
                     {
                         newResults[service.Key] = new List<IZeroconfHost>();

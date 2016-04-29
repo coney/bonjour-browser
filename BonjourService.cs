@@ -20,8 +20,6 @@ namespace bonjour_browser
             {
                 ILookup<string, string> domains = await ZeroconfResolver.BrowseDomainsAsync();
                 responses = await ZeroconfResolver.ResolveAsync(domains.Select(g => g.Key));
-                foreach (var resp in responses)
-                    Console.WriteLine(resp);
             }
             finally
             {
