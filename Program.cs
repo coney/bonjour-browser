@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace bonjour_broswer
+namespace bonjour_browser
 {
     static class Program
     {

@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using Zeroconf;
 
-namespace bonjour_broswer
+namespace bonjour_browser
 {
     internal abstract class TreeNodeMapper
     {

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Zeroconf;
 
-namespace bonjour_broswer
+namespace bonjour_browser
 {
     public partial class BrowserForm : Form
     {

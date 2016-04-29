@@ -7,8 +7,8 @@
     <ProjectGuid>{B224F427-4C49-405D-9790-0B2C2EBF343B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>bonjour_broswer</RootNamespace>
-    <AssemblyName>bonjour-broswer</AssemblyName>
+    <RootNamespace>bonjour_browser</RootNamespace>
+    <AssemblyName>bonjour-browser</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

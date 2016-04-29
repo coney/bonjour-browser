@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace bonjour_broswer.Properties
+namespace bonjour_browser.Properties
 {
 
 

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Zeroconf;
 
-namespace bonjour_broswer
+namespace bonjour_browser
 {
     class BonjourService
     {

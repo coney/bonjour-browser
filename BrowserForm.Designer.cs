@@ -1,4 +1,4 @@
-﻿namespace bonjour_broswer
+﻿namespace bonjour_browser
 {
     partial class BrowserForm
     {

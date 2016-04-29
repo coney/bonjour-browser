@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Zeroconf;
 
-namespace bonjour_broswer
+namespace bonjour_browser
 {
     internal class ServiceNameMapper : TreeNodeMapper
     {
